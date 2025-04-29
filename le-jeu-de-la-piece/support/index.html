@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support - Le Jeu de la Pièce</title>
+</head>
+
+<body>
+    <main>
+        <h1>Support</h1>
+        <p>Bienvenue sur la page d'assistance de <strong>Le Jeu de la Pièce</strong>.</p>
+
+        <section>
+            <h2>Contact</h2>
+            <p>
+                <button id="show-email" style="font-size:1rem; padding:0.5rem 1rem; cursor:pointer;">
+                    Voir l'email de contact
+                </button>
+            </p>
+            <p id="email" style="display:none; margin-top:1rem;"></p>
+        </section>
+
+        <section>
+            <h2>FAQ</h2>
+            <ul>
+                <li><strong>Le jeu est-il gratuit ?</strong> Oui, il est entièrement gratuit avec publicités.</li>
+                <li><strong>Comment signaler un bug ?</strong> Cliquez sur "Voir l'email de contact" pour obtenir notre
+                    adresse.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Politique de confidentialité</h2>
+            <p>Consultez notre politique de confidentialité <a href="index.html">ici</a>.</p>
+        </section>
+    </main>
+
+    <script>
+        const user = "pro.morvan.steven";
+        const domain = "gmail.com";
+        const email = user + "@" + domain;
+        document.getElementById("show-email").addEventListener("click", function () {
+            document.getElementById("email").innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+            document.getElementById("email").style.display = "block";
+            this.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
